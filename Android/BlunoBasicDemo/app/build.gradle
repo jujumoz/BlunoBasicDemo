@@ -36,6 +36,7 @@ dependencies {
     testImplementation "junit:junit:$junit"
 
     implementation "androidx.appcompat:appcompat:$x_appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$x_constraintlayout"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$kotlin_core_version"
