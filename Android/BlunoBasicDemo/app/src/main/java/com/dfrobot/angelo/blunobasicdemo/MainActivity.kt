@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.ScrollView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BlunoLibrary() {
+class MainActivity : BlunoActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
