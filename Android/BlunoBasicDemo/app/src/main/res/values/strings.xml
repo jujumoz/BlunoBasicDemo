@@ -20,4 +20,12 @@
     <string name="menu_scan">Scan</string>
     <string name="menu_stop">Stop</string>
     <string name="action_settings">Action settings</string>
+
+    <!-- Connection State Enum items -->
+    <string name="state_connected">Connected</string>
+    <string name="state_connecting">Connecting</string>
+    <string name="state_scan">Scan</string>
+    <string name="state_scanning">Scanning</string>
+    <string name="state_disconnecting">isDisconnecting</string>
+    <string name="state_error">Error</string>
 </resources>
