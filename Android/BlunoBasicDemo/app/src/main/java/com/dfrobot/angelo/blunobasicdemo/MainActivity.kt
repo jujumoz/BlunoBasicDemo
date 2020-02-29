@@ -14,8 +14,8 @@ class MainActivity : BlunoLibrary() {
         onCreateProcess()
 
         serialBegin(115200)
-        buttonSerialSend.setOnClickListener { serialSend(serialSendText.text.toString()) }
-        buttonScan.setOnClickListener { buttonScanOnClickProcess() }
+        send_button.setOnClickListener { serialSend(send_data_edit_text.text.toString()) }
+        scan_button.setOnClickListener { buttonScanOnClickProcess() }
     }
 
     override fun onResume() {
@@ -45,17 +45,17 @@ class MainActivity : BlunoLibrary() {
 
     override fun onConectionStateChange(connectionState: connectionStateEnum) {
         when (connectionState) {
-            connectionStateEnum.isConnected -> buttonScan.text = getString(R.string.state_connected)
-            connectionStateEnum.isConnecting -> buttonScan.text = getString(R.string.state_connecting)
-            connectionStateEnum.isToScan -> buttonScan.text = getString(R.string.state_scan)
-            connectionStateEnum.isScanning -> buttonScan.text = getString(R.string.state_scanning)
-            connectionStateEnum.isDisconnecting -> buttonScan.text = getString(R.string.state_disconnecting)
+            connectionStateEnum.isConnected -> scan_button.text = getString(R.string.state_connected)
+            connectionStateEnum.isConnecting -> scan_button.text = getString(R.string.state_connecting)
+            connectionStateEnum.isToScan -> scan_button.text = getString(R.string.state_scan)
+            connectionStateEnum.isScanning -> scan_button.text = getString(R.string.state_scanning)
+            connectionStateEnum.isDisconnecting -> scan_button.text = getString(R.string.state_disconnecting)
             connectionStateEnum.isNull -> getString(R.string.state_error)
         }
     }
 
     override fun onSerialReceived(dataReceived: String) {
-        serialReveicedText.append(dataReceived)
-        (serialReveicedText.parent as ScrollView).fullScroll(View.FOCUS_DOWN)
+        received_data_text_view.append(dataReceived)
+        (received_data_text_view.parent as ScrollView).fullScroll(View.FOCUS_DOWN)
     }
 }

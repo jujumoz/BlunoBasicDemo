@@ -1,6 +1,8 @@
 <resources>
 
     <string name="app_name">BlunoBasicDemo</string>
+
+    <!-- BLE -->
     <string name="ble_not_supported">BLE is not supported</string>
     <string name="label_data">Data:</string>
     <string name="label_device_address">Device address:</string>
@@ -28,4 +30,11 @@
     <string name="state_scanning">Scanning</string>
     <string name="state_disconnecting">isDisconnecting</string>
     <string name="state_error">Error</string>
+    <string name="scan">Scan</string>
+
+    <!-- layout -->
+    <string name="send_data">Send Data:</string>
+    <string name="send_data_button">Send Data</string>
+    <string name="data_sending_area">Data sending Area</string>
+    <string name="received_data">Received Data:</string>
 </resources>
